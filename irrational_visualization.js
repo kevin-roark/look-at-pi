@@ -3,15 +3,10 @@ var pi_99k = '314159265358979323846264338327950288419716939937510582097494459230
 var cur = 0;
 var deg = 0;
 var r, g, b;
-var YCenter = window.innerHeight / 2;
-var XCenter = window.innerWidth / 2;
-var YBottom = window.innerHeight - 50;
-var XBottom = 0;
 var X = window.innerWidth;
 var Y = window.innerHeight;
 
 var pic, nums;
-var myfont 
 
 window.addEventListener('load', function() { start(); }, false);
 
@@ -23,25 +18,12 @@ function start() {
     text: "\u03C0"
   }]);
 
-  nums = Raphael([0, 0, X, Y, {
-    type: "text",
-    x: X/2,
-    y: Y-150,
-    text: "nothin'"
-  }])
-
-  myfont = pic.paper.getFont('irrational');
-
   pic.attr(
     {"font-family":"irrational",
      "font-size":"600"}
      );
 
-  nums.attr(
-    {"font-size":"200"}
-    );
-
-  //pic.paper.print(100, 400, "hello", myfont, 100);
+  nums = window.document.getElementById('numbers');
   
   rotate();
   makePiImage();
@@ -58,8 +40,8 @@ function makePiImage() {
   var color = Raphael.rgb(r%256, g%256, b%256);
   changeBackground(color);
 
-  var des = zfill(r,3) + " ... " + zfill(g,3) + " ... " + zfill(b,3);
-  nums.attr( {"text":des} );
+  var des = zfill(r,3) + "    " + zfill(g,3) + "    " + zfill(b,3);
+  nums.innerHTML = des;
 
   setTimeout(makePiImage, 300);
 }

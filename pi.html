@@ -3,11 +3,20 @@
 <head>
   <title>So this is what PI looks like...</title>
 
-  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P&subset=greek,latin' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
 
   <style>
     body {
-      font-family: 'Press Start 2P';
+      font-family: 'Josefin Slab';
+      white-space: pre;
+    }
+    .nums{
+      position: absolute; 
+      bottom: -100; 
+      left: 0; 
+      width: 100%;
+      text-align: center;
+      font-size: 150;
     }
   </style>
 </head>
@@ -16,7 +25,11 @@
 
   <script type="text/javascript" src="irrational_visualization.js"></script>
   <script type="text/javascript" src="raphael-min.js"></script>
-  <script type="text/javascript" src="irrational_400.font.js"></script>
+
+
+  <p id="numbers" class="nums">
+  
+  </p>
 
 </body>
 
