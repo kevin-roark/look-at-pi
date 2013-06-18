@@ -21,12 +21,23 @@ function start() {
   pic.attr(
     {"font-family":"irrational",
      "font-size":"600"}
-     );
+  );
 
   nums = window.document.getElementById('numbers');
   
   rotate();
   makePiImage();
+}
+
+window.onresize = function() {
+  sz = String( window.innerWidth / 3 )
+  x = String ( window.innerWidth / 2 )
+  y = String ( window.innerHeight / 3 )
+  pic.attr(
+    {"font-size":sz,
+            "x":x,
+            "y":y}
+  ); 
 }
 
 function makePiImage() {
@@ -37,7 +48,7 @@ function makePiImage() {
   b = parseInt(pi_99k.substring(cur, cur+3));
   cur += 3;
 
-  var color = Raphael.rgb(r%256, g%256, b%256);
+  var color = Raphael.rgb(r / 999 * 255, g / 999 * 255, b/ 999 * 255);
   changeBackground(color);
 
   var des = zfill(r,3) + "      " + zfill(g,3) + "      " + zfill(b,3);

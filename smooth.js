@@ -3,6 +3,9 @@ var pi_99k = '314159265358979323846264338327950288419716939937510582097494459230
 var cur = 0;
 var deg = 0;
 var r, g, b;
+var nextR = 0;
+var nextB = 0;
+var nextG = 0;
 var X = window.innerWidth;
 var Y = window.innerHeight;
 
@@ -30,18 +33,24 @@ function start() {
 }
 
 function makePiImage() {
-  r = parseInt(pi_99k.substring(cur, cur+3));
+  r = nextR;
+  g = nextG;
+  b = nextB;
+
+  nextR = parseInt(pi_99k.substring(cur, cur+3));
   cur += 3;
-  g = parseInt(pi_99k.substring(cur, cur+3));
+  nextG = parseInt(pi_99k.substring(cur, cur+3));
   cur += 3;
-  b = parseInt(pi_99k.substring(cur, cur+3));
+  nextB = parseInt(pi_99k.substring(cur, cur+3));
   cur += 3;
+
+  //var des = zfill(r,3) + "      " + zfill(g,3) + "      " + zfill(b,3);
+  //nums.innerHTML = des;
 
   var color = Raphael.rgb(r%256, g%256, b%256);
   changeBackground(color);
 
-  var des = zfill(r,3) + "      " + zfill(g,3) + "      " + zfill(b,3);
-  nums.innerHTML = des;
+  
 
   setTimeout(makePiImage, 300);
 }
