@@ -1,0 +1,137 @@
+<html>
+
+<head>
+  <title> LOOK AT THESE NUMBERS </title>
+
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Oxygen+Mono|Cutive+Mono' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  <style>
+    body {
+      /*font-family: 'Ubuntu Mono', sans-serif;*/
+      /*font-family: 'Oxygen Mono', sans-serif;*/
+      font-family: 'Cutive Mono', serif;
+      /*font-family: 'Open Sans Condensed', sans-serif;*/
+    }
+    h1 span {
+      font-size: 3em;
+      height: 350px;
+      position: absolute;
+      width: 20px;
+      left: 0;
+      top: 0;
+
+      -webkit-transform-origin: bottom center;
+      -moz-transform-origin: bottom center;
+      -o-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+      transform-origin: bottom center;
+    }
+    a:link {
+      text-decoration: none;
+      color: black;
+    }
+    a:visited {
+      text-decoration: none;
+      color: black;
+    }
+    div.center {
+      margin-top: 50px;
+      width: 650px;
+      height: 650px;
+      display: block;
+      background-color: #D9D9D9;
+      border-radius: 50%;
+      border-width: 5px;
+      border-color: #5c5c5c;
+      border-style: solid;
+    }
+    .badge {
+      -webkit-transform: rotate(-72deg);
+      -moz-transform: rotate(-72deg);
+      -o-transform: rotate(-72deg);
+      -ms-transform: rotate(-72deg);
+      transform: rotate(-72deg);
+      position: relative;
+      left: -36%;
+      top: -6%;
+    }
+    .slog {
+      position: relative;
+      text-align: center;
+      bottom: -75%;
+      font-family: 'Open Sans Condensed', sans-serif;
+    }
+    .char1 {
+      -webkit-transform: rotate(72deg);
+      -moz-transform: rotate(72deg);
+      -o-transform: rotate(72deg);
+      -ms-transform: rotate(72deg);
+      transform: rotate(72deg);
+    }
+    .char2 {
+      -webkit-transform: rotate(133deg);
+      -moz-transform: rotate(133deg);
+      -o-transform: rotate(133deg);
+      -ms-transform: rotate(133deg);
+      transform: rotate(133deg);
+      font-size: 3.6em;
+    }
+    .char3 {
+      -webkit-transform: rotate(108deg);
+      -moz-transform: rotate(108deg);
+      -o-transform: rotate(108deg);
+      -ms-transform: rotate(108deg);
+      transform: rotate(108deg);
+    }
+    .char4 {
+      -webkit-transform: rotate(387deg);
+      -moz-transform: rotate(387deg);
+      -o-transform: rotate(387deg);
+      -ms-transform: rotate(387deg);
+      transform: rotate(387deg);
+    }
+    .char5 {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script> 
+    $(window).resize(function(){
+
+      $('.center').css({
+          position:'absolute',
+          left: ($(window).width() - $('.center').outerWidth())/2.1,
+          top: 0
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="center">
+    <h1 class="badge">
+      <span class="char1"><a href="pi.html">&Pi;</a></span>
+      <span class="char2"><a href="e.html">e</a></span>
+      <span class="char3"><a href="tau.html">&Tau;</a></span>
+      <span class="char4"><a href="sq2.html">&radic;2</a></span>
+      <span class="char5"><a href="phi.html">&Phi;</a></span>
+    </h1>
+    <h1 class="slog">Have a click, numbers are fun ###</h1>
+  </div>
+
+  <script> 
+    // To initially run the function:
+    $(window).resize();
+  </script>
+
+</body>
+
+</html>
