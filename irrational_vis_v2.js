@@ -7,8 +7,6 @@ var phi_100k = '1618033988749894848204586834365638117720309179805762862135448622
 var cur = 0;
 var deg = 0;
 var r, g, b;
-var X = window.innerWidth;
-var Y = window.innerHeight;
 
 var pic, nums, theNum;
 
@@ -23,12 +21,14 @@ var num_map = {
 var sym_map = {
                "pi.html" : "\u03C0",
                "e.html" : "e",
-               "sq2.html" : " \u221A2",
+               "sq2.html" : " \u221A",
                "tau.html" : "\u03C4",
                "phi.html" : "\u03D5"
              };
 
 window.addEventListener('load', function() { start(); }, false);
+
+window.addEventListener('resize', function() { resizeIt(); }, false);
 
 function start() {
   path = window.location.pathname
@@ -36,28 +36,29 @@ function start() {
 
   theNum = num_map[file]
 
-  pic = Raphael([0, 0, X, Y, {
+  pic = Raphael([0, 0, window.innerWidth, window.innerHeight, {
     type: "text",
-    x: X/2,
-    y: Y/3,
     text: sym_map[file]
   }]);
 
   pic.attr(
-    {"font-family":"irrational",
-     "font-size":"600"}
+    {"font-family":"irrational"}
   );
 
+  resizeIt();
+
   nums = window.document.getElementById('numbers');
-  
-  rotate();
+
   makePiImage();
+  setInterval(makePiImage, 300);
+  rotate(); 
+  setInterval(rotate, 15);
 }
 
-window.onresize = function() {
-  sz = String( window.innerWidth / 3 )
-  x = String ( window.innerWidth / 2 )
-  y = String ( window.innerHeight / 3 )
+function resizeIt() {
+  sz = String ( window.innerHeight / 2 );
+  x = String ( window.innerWidth / 2 );
+  y = String ( window.innerHeight / 2.8 );
   pic.attr(
     {"font-size":sz,
             "x":x,
@@ -78,15 +79,11 @@ function makePiImage() {
 
   var des = zfill(r,3) + "      " + zfill(g,3) + "      " + zfill(b,3);
   nums.innerHTML = des;
-
-  setTimeout(makePiImage, 300);
 }
 
 function rotate() {
   pic.transform("r" + deg);
   deg += 3;
-
-  setTimeout(rotate, 15);
 }
 
 function changeBackground(color) {

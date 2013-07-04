@@ -5,130 +5,153 @@
 
   <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Oxygen+Mono|Cutive+Mono' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <!--link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"-->
+  <link href="css/lookatpi.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 
-  <style>
-    body {
-      /*font-family: 'Ubuntu Mono', sans-serif;*/
-      /*font-family: 'Oxygen Mono', sans-serif;*/
-      font-family: 'Cutive Mono', serif;
-      /*font-family: 'Open Sans Condensed', sans-serif;*/
-    }
-    h1 span {
-      font-size: 3em;
-      height: 350px;
-      position: absolute;
-      width: 20px;
-      left: 0;
-      top: 0;
-
-      -webkit-transform-origin: bottom center;
-      -moz-transform-origin: bottom center;
-      -o-transform-origin: bottom center;
-      -ms-transform-origin: bottom center;
-      transform-origin: bottom center;
-    }
-    a:link {
-      text-decoration: none;
-      color: black;
-    }
-    a:visited {
-      text-decoration: none;
-      color: black;
-    }
-    div.center {
-      margin-top: 50px;
-      width: 650px;
-      height: 650px;
-      display: block;
-      background-color: #D9D9D9;
-      border-radius: 50%;
-      border-width: 5px;
-      border-color: #5c5c5c;
-      border-style: solid;
-    }
-    .badge {
-      -webkit-transform: rotate(-72deg);
-      -moz-transform: rotate(-72deg);
-      -o-transform: rotate(-72deg);
-      -ms-transform: rotate(-72deg);
-      transform: rotate(-72deg);
-      position: relative;
-      left: -36%;
-      top: -6%;
-    }
-    .slog {
-      position: relative;
-      text-align: center;
-      bottom: -75%;
-      font-family: 'Open Sans Condensed', sans-serif;
-    }
-    .char1 {
-      -webkit-transform: rotate(72deg);
-      -moz-transform: rotate(72deg);
-      -o-transform: rotate(72deg);
-      -ms-transform: rotate(72deg);
-      transform: rotate(72deg);
-    }
-    .char2 {
-      -webkit-transform: rotate(133deg);
-      -moz-transform: rotate(133deg);
-      -o-transform: rotate(133deg);
-      -ms-transform: rotate(133deg);
-      transform: rotate(133deg);
-      font-size: 3.6em;
-    }
-    .char3 {
-      -webkit-transform: rotate(108deg);
-      -moz-transform: rotate(108deg);
-      -o-transform: rotate(108deg);
-      -ms-transform: rotate(108deg);
-      transform: rotate(108deg);
-    }
-    .char4 {
-      -webkit-transform: rotate(387deg);
-      -moz-transform: rotate(387deg);
-      -o-transform: rotate(387deg);
-      -ms-transform: rotate(387deg);
-      transform: rotate(387deg);
-    }
-    .char5 {
-      -webkit-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  </style>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script> 
     $(window).resize(function(){
-
-      $('.center').css({
-          position:'absolute',
-          left: ($(window).width() - $('.center').outerWidth())/2.1,
-          top: 0
-      });
-
+      $('.toggle').css('height', $(window).height() - $('.banner').height()*2 - 60);
+    });
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
     });
   </script>
 </head>
 
-<body>
+<body>    
+  <div class="banner">
+    <span class="banner-text">
+      look at pi: because numbers are pretty (and so are you) 
+    </span>
+    <span class="banner-icons">
+      <a class="ban-icon" href="https://github.com/kevin-roark/look-at-pi" target="_blank"><i class="icon-github"></i></a> 
+      <a class="ban-icon" href="https://twitter.com/LIMP__BISCUIT" target="_blank"><i class="icon-twitter"></i></a>
+      <a class="ban-icon" id="heart" href="http://www.vegan.org/" target="_blank"><i class="icon-heart"></i> <i class="icon-heart"></i> <i class="icon-heart"></i></a>
+    </span>
+  </div> <!-- banner -->
 
-  <div class="center">
-    <h1 class="badge">
-      <span class="char1"><a href="pi.html">&Pi;</a></span>
-      <span class="char2"><a href="e.html">e</a></span>
-      <span class="char3"><a href="tau.html">&Tau;</a></span>
-      <span class="char4"><a href="sq2.html">&radic;2</a></span>
-      <span class="char5"><a href="phi.html">&Phi;</a></span>
-    </h1>
-    <h1 class="slog">Have a click, numbers are fun ###</h1>
-  </div>
+  <div class="wrapper">
 
-  <script> 
-    // To initially run the function:
+    <div class="toggle" id="left">
+      <div class="toggle-text-area">
+        <h1 class="toggle-header-left">
+          What ... is this thing? <i class="icon-bolt"></i>
+        </h1>
+        <h4 class="toggle-text-left">Well, I'm glad you asked. look-at-pi is a fun lil' toy that visualizes various irrational numbers. Before you read any further, please click your favorite number on the "circle of power." Then come back.</h4>
+        <h1 class="toggle-header-left">
+          But how ... does it work? <i class="icon-rocket"></i>
+        </h1>
+        <h4 class="toggle-text-left" style="margin-bottom: 5;">
+          Magic!! Take Pi: <br/>
+          3.14159265... <br/>
+          Now divide it into 3 digit segments, like so: </br>
+          314 | 159 | 265 | ... <br/>
+          Trust me here. Take modulus 256 of each chunk to cut it to the special 0-255 range. You'll get something like this: </br>
+          058 | 159 | 009 | ... </br>
+          Suddenly, we can treat each set of 3 chunks as an (r,g,b) color value. <br/>
+          <span class="transformation">058159009 
+            <span id="jets">
+              <i class="icon-fighter-jet" id="jet1"></i> <i class="icon-fighter-jet" id="jet2"></i> <i class="icon-fighter-jet" id="jet3"></i>
+            </span>
+            <span class="picolor">058159009</span>
+          </span> <br/>
+          Now take Pi again, this time to quasi-infinity:
+        </h4>
+        <p class="piblock">3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982148086513282306647093844609550582231725359408128481117450284102701938521105559644622948954930381964428810975665933446128475648233786783165271201909145648566923460348610454326648213393607260249141273724587006606315588174881520920962829254091715364367892590360011330530548820466521384146951941511609433057270365759591953092186117381932611793105118548074462379962749567351885752724891227938183...</p>
+        <h4 class="toggle-text-left" style="margin-top: 5;">
+          Instead of making one color from Pi, make a lot. And flash through 'em real fast. Suddenly each irrational number has a characteristic visual fingerprint. Whammy!
+        </h4>
+        <h1 class="toggle-header-left">
+          Ahh ... whats the point? <i class="icon-spinner"></i>
+        </h1>
+        <h4 class="toggle-text-left">Shut up!!! Please enjoy my toy!!!</h4>
+      </div>
+    </div> <!-- toggle -->
+
+    <div class="toggle" id="right">
+      <div class="toggle-text-area">
+        <h2 class="toggle-banner">
+          <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i>
+        </h2>
+        <h1 class="toggle-header-right">
+          The   Irrationals:
+        </h1>
+        <h2 class="toggle-text-right" id="phi">
+          <a href="http://en.wikipedia.org/wiki/Golden_ratio" target="_blank">
+            phi
+          </a>: The golden ratio
+        </h2>
+        <h2 class="toggle-text-right" id="sqrt">
+          <a href="http://en.wikipedia.org/wiki/Square_root_of_2" target="_blank">
+            &radic;2
+          </a>: A seminal root
+        </h2>
+        <h2 class="toggle-text-right" id="pi">
+          <a href="http://en.wikipedia.org/wiki/Pi" target="_blank">
+            pi
+          </a>: It's just right
+        </h2>
+        <h2 class="toggle-text-right" id="tau">
+          <a href="http://en.wikipedia.org/wiki/Tau" target="_blank">
+            tau
+          </a>: !!!! Or is it ????
+        </h2>
+        <h2 class="toggle-text-right" id="e">
+          <a href="http://en.wikipedia.org/wiki/E_(mathematical_constant)" target="_blank">
+            e
+          </a>: Natural and weird
+        </h2>
+        <h1 class="toggle-text-right" id="mystery">
+          #########
+        </h1>
+      </div>
+    </div> <!-- toggle -->
+
+    <div class="jumbo">
+      <div id="nums">
+        <a class="num" href="phi.html">$ \phi $</a>
+        <a class="num" href="sq2.html"><span id="sq2">$ \sqrt{2} $</span></a>
+        <a class="num" href="pi.html">$ \pi $</a>  
+        <a class="num" href="tau.html">$ \tau $</a> 
+        <a class="num" href="e.html">$ e $</a>
+      </div>
+      <h1>
+        Go ahead, have a click
+      </h1>
+      <h2>
+        ... its fun!
+      </h2>      
+    </div> <!-- jumbo -->
+
+  </div> <!-- wrapper -->
+
+  <script>
+    $('.toggle').hover(function() {
+      swapit($(this));
+    });
+
+    function swapit(elem) {
+      if ( elem.outerWidth() > 100) {
+        $(elem.children()[0]).css('display', 'none');
+        elem.css('overflow-y', 'hidden');
+        elem.fadeTo(0, 0.5);
+        elem.animate({width: "35px"}, 400);
+      }
+      else {
+        elem.animate({width: "22%"}, 600, function() {
+          elem.fadeTo(0, 0.65);
+          elem.css('overflow-y', 'auto');
+          $(elem.children()[0]).css('display', 'block');
+        });
+      }
+    }
+
+     // To initially run the function:
     $(window).resize();
   </script>
 

@@ -1,41 +1,25 @@
 <html>
 
-<head>
-  <title>... and phi</title>
+  <head>
+    <title>... and phi</title>
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href="css/graphics.css" rel="stylesheet" type="text/css">
 
-  <style>
-    body {
-      font-family: 'Open Sans Condensed';
-      white-space: pre;
-    }
-    .nums{
-      position: absolute; 
-      bottom: -100; 
-      left: 0; 
-      width: 100%;
-      text-align: center;
-      font-size: 160;
-    }
-    .intro{
-      position:absolute;
-      top:-5%;
-      left:0%;
-      font-size:50;
-    }
-  </style>
-</head>
+    <script type="text/javascript" src="irrational_vis_v2.js"></script>
+    <script type="text/javascript" src="raphael-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+  </head>
 
-<body>
+  <body>
+    <p class="intro"> 1.61.... </p>
 
-  <script type="text/javascript" src="irrational_vis_v2.js"></script>
-  <script type="text/javascript" src="raphael-min.js"></script>
+    <p id="numbers" class="nums"></p>
 
-  <p class="intro"> 1.61.... </p>
-
-  <p id="numbers" class="nums"></p>
-
-</body>
+    <script>
+      $('#numbers').fitText();
+    </script>
+  </body>
 
 </html>
