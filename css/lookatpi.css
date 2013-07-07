@@ -1,9 +1,7 @@
 body {
       /*font-family: 'Ubuntu Mono', sans-serif;*/
       /*font-family: 'Oxygen Mono', sans-serif;*/
-      /*font-family: 'Open Sans Condensed', sans-serif;*/
       font-family: 'Open Sans Condensed', sans-serif;
-      /*padding-top: 80px;*/
       margin: 0;
       padding: 0;
       height: 100%;
@@ -89,41 +87,47 @@ a:visited {
   margin-right:auto;
   text-align: center;
   background-color: rgba(248, 248, 248, 0.25);
+  line-height: 70px;
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
           border-radius: 10px;
 }
 .jumbo h1 {
-  font-size: 5em;
+  /* font-size: 5em; */
 }
 .jumbo #nums {
   font-family: 'Oxygen Mono', sans-serif;
-  font-size: 10em;
+  width: 100%;
+  display: block;
+}
+#slogan {
+  display: inline-block;
+  width: 80%;
+}
+#footnote {
+  display: inline-block;
+  width: 50%;
 }
 #sq2 {
   font-size: 0.75em;
 }
 .wrapper {
-  margin-top: 80px;
+  margin-top: 100px;
   position: relative;
+  display: block;
 }
 .toggle {
   position: relative;
   width: 35px;
   opacity: 0.4;
   color: white;
-  margin-top: 20px;
   overflow-y: hidden;
   overflow-x: hidden;
-  height: 100%;
 }
 .toggle-text-area {
   padding-left: 20px;
   padding-right: 20px;
   display: none;
-}
-#rightta {
-  white-space: pre-wrap;
 }
 .toggle-wrap {
   width: 0.5%;
@@ -151,7 +155,7 @@ a:visited {
 }
 .toggle-text-right {
   font-size: 3em;
-  line-height: 1em;
+  line-height: 1.5em;
   padding-left: 20px;
 }
 .toggle-header-left {
@@ -167,7 +171,8 @@ a:visited {
   font-size: 2.5em;
   color: black;
   line-height: 0.5em;
-  padding-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 #phi {
   color: #FFD900;

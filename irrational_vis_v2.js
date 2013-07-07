@@ -68,13 +68,13 @@ function resizeIt() {
 
 function makePiImage() {
   r = parseInt(theNum.substring(cur, cur+3));
-  cur += 3;
+  cur += 3; 
   g = parseInt(theNum.substring(cur, cur+3));
   cur += 3;
   b = parseInt(theNum.substring(cur, cur+3));
   cur += 3;
 
-  var color = Raphael.rgb(r / 999 * 255, g / 999 * 255, b/ 999 * 255);
+  var color = Raphael.rgb(r%256, g%256, b%256);
   changeBackground(color);
 
   var des = zfill(r,3) + "      " + zfill(g,3) + "      " + zfill(b,3);

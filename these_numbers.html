@@ -11,11 +11,8 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <script> 
-    $(window).resize(function(){
-      $('.toggle').css('height', $(window).height() - $('.banner').height()*2 - 60);
-    });
-  </script>
+  <script src="js/jquery.fittext.js"></script>
+  <script src="js/homepage.js"></script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
@@ -42,7 +39,7 @@
         <h1 class="toggle-header-left">
           What ... is this thing? <i class="icon-bolt"></i>
         </h1>
-        <h4 class="toggle-text-left">Well, I'm glad you asked. look-at-pi is a fun lil' toy that visualizes various irrational numbers. Before you read any further, please click your favorite number on the "circle of power." Then come back.</h4>
+        <h4 class="toggle-text-left">Well, I'm glad you asked. look-at-pi is a fun lil' toy that can visualize some irrational numbers. Click on one of those symbols to the right to see. Then come back.</h4>
         <h1 class="toggle-header-left">
           But how ... does it work? <i class="icon-rocket"></i>
         </h1>
@@ -51,9 +48,9 @@
           3.14159265... <br/>
           Now divide it into 3 digit segments, like so: </br>
           314 | 159 | 265 | ... <br/>
-          Trust me here. Take modulus 256 of each chunk to cut it to the special 0-255 range. You'll get something like this: </br>
+          We're doing well. Take modulus 256 of each chunk to cut it to that special 8-bit range. You'll get something like this: </br>
           058 | 159 | 009 | ... </br>
-          Suddenly, we can treat each set of 3 chunks as an (r,g,b) color value. <br/>
+          Like wizards, we can now treat each set of 3 chunks as an (r,g,b) color value. <br/>
           <span class="transformation">058159009 
             <span id="jets">
               <i class="icon-fighter-jet" id="jet1"></i> <i class="icon-fighter-jet" id="jet2"></i> <i class="icon-fighter-jet" id="jet3"></i>
@@ -69,7 +66,9 @@
         <h1 class="toggle-header-left">
           Ahh ... whats the point? <i class="icon-spinner"></i>
         </h1>
-        <h4 class="toggle-text-left">Shut up!!! Please enjoy my toy!!!</h4>
+        <h4 class="toggle-text-left" style="padding-bottom: 10px">
+          Shut up!!! Please enjoy my toy!!!
+        </h4>
       </div>
     </div> <!-- toggle -->
 
@@ -78,9 +77,6 @@
         <h2 class="toggle-banner">
           <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i>
         </h2>
-        <h1 class="toggle-header-right">
-          The   Irrationals:
-        </h1>
         <h2 class="toggle-text-right" id="phi">
           <a href="http://en.wikipedia.org/wiki/Golden_ratio" target="_blank">
             phi
@@ -106,9 +102,9 @@
             e
           </a>: Natural and weird
         </h2>
-        <h1 class="toggle-text-right" id="mystery">
-          #########
-        </h1>
+        <h2 class="toggle-banner">
+          <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i>
+        </h2>
       </div>
     </div> <!-- toggle -->
 
@@ -120,36 +116,26 @@
         <a class="num" href="tau.html">$ \tau $</a> 
         <a class="num" href="e.html">$ e $</a>
       </div>
-      <h1>
+      <p id="slogan">
         Go ahead, have a click
-      </h1>
-      <h2>
+      </p>
+      <h1 id="footnote">
         ... its fun!
-      </h2>      
+      </h1>      
     </div> <!-- jumbo -->
 
   </div> <!-- wrapper -->
 
   <script>
+    $('#slogan').fitText();
+    $('#footnote').fitText();
+    $('#nums').fitText(0.75);
+
     $('.toggle').hover(function() {
       swapit($(this));
     });
 
-    function swapit(elem) {
-      if ( elem.outerWidth() > 100) {
-        $(elem.children()[0]).css('display', 'none');
-        elem.css('overflow-y', 'hidden');
-        elem.fadeTo(0, 0.5);
-        elem.animate({width: "35px"}, 400);
-      }
-      else {
-        elem.animate({width: "22%"}, 600, function() {
-          elem.fadeTo(0, 0.65);
-          elem.css('overflow-y', 'auto');
-          $(elem.children()[0]).css('display', 'block');
-        });
-      }
-    }
+    $('.wrapper').css('height', $(window).innerHeight() - $('.banner').height());
 
      // To initially run the function:
     $(window).resize();
