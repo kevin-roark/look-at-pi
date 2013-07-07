@@ -127,6 +127,16 @@
   </div> <!-- wrapper -->
 
   <script>
+    $('#slogan').fitText();
+    $('#footnote').fitText();
+    $('#nums').fitText(0.75);
+
+    $('.toggle').hover(function() {
+      swapit($(this));
+    });
+
+    $('.wrapper').css('height', $(window).innerHeight() - $('.banner').height());
+
      // To initially run the function:
     $(window).resize();
   </script>

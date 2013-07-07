@@ -19,18 +19,6 @@ html {
   margin: 0;
   padding: 0;
 }
-h1 span {
-  font-size: 3.5em;
-  height: 450px;
-  position: absolute;
-  width: 1px;
-  font-family: 'Oxygen Mono', sans-serif;
-  -webkit-transform-origin: bottom center;
-  -moz-transform-origin: bottom center;
-  -o-transform-origin: bottom center;
-  -ms-transform-origin: bottom center;
-  transform-origin: bottom center;
-}
 a:link {
   text-decoration: none;
   color: inherit;
@@ -66,14 +54,6 @@ a:visited {
 .ban-icon {
   padding: 10px;
 }
-.ban-icon:link {
-  text-decoration: none;
-  color: white;
-}
-.ban-icon:visited {
-  text-decoration: none;
-  color: white;
-}
 .ban-icon#heart {
   padding-left: 20px;
 }
@@ -91,9 +71,6 @@ a:visited {
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
           border-radius: 10px;
-}
-.jumbo h1 {
-  /* font-size: 5em; */
 }
 .jumbo #nums {
   font-family: 'Oxygen Mono', sans-serif;
@@ -129,10 +106,6 @@ a:visited {
   padding-right: 20px;
   display: none;
 }
-.toggle-wrap {
-  width: 0.5%;
-  overflow: hidden;
-}
 .toggle#left {
   float: left;
   background-color: #A31B00;
@@ -163,10 +136,6 @@ a:visited {
   line-height: 1em;
   margin-bottom: 0;
 }
-.toggle-header-right {
-  font-size: 3.5em;
-  line-height: 1em;
-}
 .toggle-banner {
   font-size: 2.5em;
   color: black;
@@ -188,11 +157,6 @@ a:visited {
 }
 #pi {
   color: #FAFAFA;
-}
-#mystery {
-  color: #FF4D00;
-  font-size: 5em;
-  line-height: 0.5em;
 }
 .transformation {
   font-size: 1.5em;

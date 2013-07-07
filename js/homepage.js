@@ -18,8 +18,13 @@ function swapit(elem) {
 $(window).resize(function(){
   var ht = $(window).innerHeight() - ($('.banner').height()+20)*2 - 20;
   $('.toggle').css('height', ht);
-  console.log($('.toggle').height());
-  console.log('window' + $(window).innerHeight())
-  console.log("ht: " + ht)
-  console.log("wrapper: " + $('.wrapper').height());
 });
+
+$('.toggle').hover(function() {
+      swapit($(this));
+});
+
+
+$('#slogan').fitText();
+$('#footnote').fitText();
+$('#nums').fitText(0.75);
