@@ -23,7 +23,7 @@
 <body>    
   <div class="banner">
     <span class="banner-text">
-      look at pi: because numbers are pretty (and so are you) 
+      <span>look at pi: because numbers are pretty (and so are you)</span>
     </span>
     <span class="banner-icons">
       <a class="ban-icon" href="https://github.com/kevin-roark/look-at-pi" target="_blank"><i class="icon-github"></i></a> 
@@ -126,20 +126,7 @@
 
   </div> <!-- wrapper -->
 
-  <script>
-    $('#slogan').fitText();
-    $('#footnote').fitText();
-    $('#nums').fitText(0.75);
-
-    $('.toggle').hover(function() {
-      swapit($(this));
-    });
-
-    $('.wrapper').css('height', $(window).innerHeight() - $('.banner').height());
-
-     // To initially run the function:
-    $(window).resize();
-  </script>
+  <script src="js/homepage-end.js"></script>
 
 </body>
 

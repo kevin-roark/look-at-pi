@@ -6,7 +6,7 @@ body {
       padding: 0;
       height: 100%;
       width: 100%;
-      min-width: 1200px;
+      min-width: 900px;
       overflow-y: hidden;
       overflow-x: auto;
 }
@@ -36,20 +36,26 @@ a:visited {
 .banner {
   position: absolute;
   width: 100%;
-  min-width: 1200px;
+  min-width: 900px;
   top: 0;
   height: 80px;
   background-color: #4D4D4D;
   color: white;
+  line-height: 80px;
 }
 .banner-text {
-  font-size: 2.75em;
   padding-left: 5%;
+  width: 55%;
+  display: inline-block;
 }
 .banner-icons {
-  float: right;
+  position: absolute;
+  right: 0;
+  margin-left: auto;
+  margin-right: 0;
   padding-right: 10px;
-  font-size: 3em;
+  display: inline-block;
+  width: 20%;
 }
 .ban-icon {
   padding: 10px;
