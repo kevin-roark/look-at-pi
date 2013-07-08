@@ -14,17 +14,7 @@ function swapit(elem) {
   }
 }
 
-
 $(window).resize(function(){
   var ht = $(window).innerHeight() - ($('.banner').height()+20)*2 - 20;
   $('.toggle').css('height', ht);
 });
-
-$('.toggle').hover(function() {
-      swapit($(this));
-});
-
-
-$('#slogan').fitText();
-$('#footnote').fitText();
-$('#nums').fitText(0.75);
