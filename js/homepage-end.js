@@ -6,7 +6,7 @@ $('.banner-icons').fitText(0.9);
 $('.toggle-footer').fitText(0.3);
 $('.toggle-text-right').fitText(0.3);
 
-$('.toggle').hover(function() {
+$('.toggle').click(function() {
   swapit($(this));
 });
 

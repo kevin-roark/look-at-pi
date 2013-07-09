@@ -106,6 +106,7 @@ a:visited {
   color: white;
   overflow-y: hidden;
   overflow-x: hidden;
+  cursor: pointer;
 }
 .toggle-text-area {
   padding-left: 20px;
@@ -139,8 +140,6 @@ a:visited {
   font-size: 2.2em;
   line-height: 1em;
   margin-bottom: 0;
-}
-.toggle-footer {
   width: 100%;
 }
 .toggle-banner {
