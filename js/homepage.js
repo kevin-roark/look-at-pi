@@ -6,7 +6,7 @@ function swapit(elem) {
     elem.animate({width: "35px"}, 400);
   }
   else {
-    elem.animate({width: "22%"}, 600, function() {
+    elem.animate({width: "22.5%"}, 600, function() {
       elem.fadeTo(0, 0.65);
       elem.css('overflow-y', 'auto');
       $(elem.children()[0]).css('display', 'block');
@@ -15,6 +15,6 @@ function swapit(elem) {
 }
 
 $(window).resize(function(){
-  var ht = $(window).innerHeight() - ($('.banner').height()+20)*2 - 20;
+  var ht = $(window).height() - ($('.banner').height()+20) - 20;
   $('.toggle').css('height', ht);
 });

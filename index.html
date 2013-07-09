@@ -1,46 +1,42 @@
 <html>
+  <head>
+    <title> look at pi. please! </title>
 
-<head>
-  <title> look at pi. please! </title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Oxygen+Mono|Cutive+Mono' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <!--link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"-->
+    <link href="css/lookatpi.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Oxygen+Mono|Cutive+Mono' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <!--link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"-->
-  <link href="css/lookatpi.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <script src="js/jquery.fittext.js"></script>
-  <script src="js/homepage.js"></script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-    });
-  </script>
-</head>
-
-<body>    
-  <div class="banner">
-    <span class="banner-text">
-      <span>look at pi: because numbers are pretty (and so are you)</span>
-    </span>
-    <span class="banner-icons">
-      <a class="ban-icon" href="https://github.com/kevin-roark/look-at-pi" target="_blank"><i class="icon-github"></i></a> 
-      <a class="ban-icon" href="https://twitter.com/LIMP__BISCUIT" target="_blank"><i class="icon-twitter"></i></a>
-      <a class="ban-icon" id="heart" href="http://www.vegan.org/" target="_blank"><i class="icon-heart"></i> <i class="icon-heart"></i> <i class="icon-heart"></i></a>
-    </span>
-  </div> <!-- banner -->
-
-  <div class="wrapper">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/homepage.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+  </head>
+  <body>    
+    <div class="banner">
+      <span class="banner-text">
+        <span>look at pi: because numbers are pretty (and so are you)</span>
+      </span>
+      <span class="banner-icons">
+        <a class="ban-icon" href="https://github.com/kevin-roark/look-at-pi" target="_blank"><i class="icon-github"></i></a> 
+        <a class="ban-icon" href="https://twitter.com/LIMP__BISCUIT" target="_blank"><i class="icon-twitter"></i></a>
+        <a class="ban-icon" id="heart" href="http://www.vegan.org/" target="_blank"><i class="icon-heart"></i> <i class="icon-heart"></i> <i class="icon-heart"></i></a>
+      </span>
+    </div> <!-- banner -->
 
     <div class="toggle" id="left">
       <div class="toggle-text-area">
-        <h1 class="toggle-header-left">
+        <h1 class="toggle-header">
           What ... is this thing? <i class="icon-bolt"></i>
         </h1>
         <h4 class="toggle-text-left">Well, I'm glad you asked. look-at-pi is a fun lil' toy that can visualize some irrational numbers. Click on one of those symbols to the right to see. Then come back.</h4>
-        <h1 class="toggle-header-left">
+        <h1 class="toggle-header">
           But how ... does it work? <i class="icon-rocket"></i>
         </h1>
         <h4 class="toggle-text-left" style="margin-bottom: 5;">
@@ -63,7 +59,7 @@
         <h4 class="toggle-text-left" style="margin-top: 5;">
           Instead of making one color from Pi, make a lot. And flash through 'em real fast. Suddenly each irrational number has a characteristic visual fingerprint. Whammy!
         </h4>
-        <h1 class="toggle-header-left">
+        <h1 class="toggle-header">
           Ahh ... whats the point? <i class="icon-spinner"></i>
         </h1>
         <h4 class="toggle-text-left" style="padding-bottom: 10px">
@@ -105,28 +101,31 @@
         <h2 class="toggle-banner">
           <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i>
         </h2>
+        <p class="toggle-footer">
+          Have a suggestion? Let me know on twitter! <br/>
+          Or better yet, do it yourself on github!
+        </p>
       </div>
     </div> <!-- toggle -->
 
-    <div class="jumbo">
-      <div id="nums">
-        <a class="num" href="phi.html">$ \phi $</a>
-        <a class="num" href="sq2.html"><span id="sq2">$ \sqrt{2} $</span></a>
-        <a class="num" href="pi.html">$ \pi $</a>  
-        <a class="num" href="tau.html">$ \tau $</a> 
-        <a class="num" href="e.html">$ e $</a>
-      </div>
-      <p id="slogan">
-        Go ahead, have a click
-      </p>
-      <h1 id="footnote">
-        ... its fun!
-      </h1>      
-    </div> <!-- jumbo -->
+    <div class="wrapper">
+      <div class="jumbo">
+        <div id="nums">
+          <a class="num" href="phi.html">$ \phi $</a>
+          <a class="num" href="sq2.html"><span id="sq2">$ \sqrt{2} $</span></a>
+          <a class="num" href="pi.html">$ \pi $</a>  
+          <a class="num" href="tau.html">$ \tau $</a> 
+          <a class="num" href="e.html">$ e $</a>
+        </div>
+        <p id="slogan">
+          Go ahead, have a click
+        </p>
+        <h1 id="footnote">
+          ... its fun!
+        </h1>      
+      </div> <!-- jumbo -->
+    </div> <!-- wrapper -->
 
-  </div> <!-- wrapper -->
-
-  <script src="js/homepage-end.js"></script>
-
-</body>
+    <script src="js/homepage-end.js"></script>
+  </body>
 </html>
