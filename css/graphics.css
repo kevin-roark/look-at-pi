@@ -1,0 +1,23 @@
+body {
+  font-family: 'Open Sans Condensed';
+  white-space: pre;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.nums {
+  position: absolute; 
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 50px;
+  margin-top: 0;
+}
