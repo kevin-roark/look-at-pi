@@ -142,12 +142,15 @@ a:visited {
   margin-bottom: 0;
   width: 100%;
 }
+.toggle-footer {
+  width: 100%;
+}
 .toggle-banner {
-  font-size: 2.5em;
   color: black;
   line-height: 0.5em;
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 100%;
 }
 #phi {
   color: #FFD900;
@@ -163,6 +166,9 @@ a:visited {
 }
 #pi {
   color: #FAFAFA;
+}
+#finisher {
+  color: #663300;
 }
 .transformation {
   font-size: 1.5em;

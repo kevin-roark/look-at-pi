@@ -4,6 +4,7 @@ var r, g, b;
 
 var pic, nums, theNum;
 
+/* chooses symbol to display based on name of webpage */
 var sym_map = {
                "pi.html" : "\u03C0",
                "e.html" : "e",
@@ -16,6 +17,7 @@ window.addEventListener('load', function() { start(); }, false);
 
 window.addEventListener('resize', function() { resizeIt(); }, false);
 
+/* sets up Raphael manipulatable with correct number symbol, then gets the ball rolling! */
 function start() {
   path = window.location.pathname;
   file = path.substring(path.lastIndexOf('/')+1);
@@ -42,6 +44,7 @@ function start() {
   
 }
 
+/* called upon window resizing, realigns all of the elements */
 function resizeIt() {
   sz = String ( window.innerHeight / 2 );
   x = String ( window.innerWidth / 2 );
@@ -53,6 +56,8 @@ function resizeIt() {
   ); 
 }
 
+/* parses the next 9 digits of our number into a color, changes background to that color,
+and displays the digits it parses */
 function makePiImage() {
   r = parseInt(theNum.substring(cur, cur+3));
   cur += 3; 
@@ -68,15 +73,18 @@ function makePiImage() {
   nums.innerHTML = des;
 }
 
+/* rotates the spinning number symbol in the center by 3 degrees */
 function rotate() {
   pic.transform("r" + deg);
   deg += 3;
 }
 
+/* changes background color of the page */
 function changeBackground(color) {
   document.body.style.background = color;
 }
 
+/* padds numbers smaller than 3 digits with zeros for uniform length */
 function zfill(number, size) {
   number = number.toString();
   while (number.length < size) number = "0" + number;
