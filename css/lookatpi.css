@@ -78,7 +78,7 @@ a:visited {
      -moz-border-radius: 10px;
           border-radius: 10px;
 }
-.jumbo #nums {
+#nums {
   font-family: 'Oxygen Mono', sans-serif;
   width: 100%;
   display: block;
