@@ -60,9 +60,12 @@ a:visited {
 .ban-icon {
   padding: 10px;
 }
-.ban-icon#heart {
-  padding-left: 20px;
-}
+  .ban-icon:hover, .ban-icon:focus {
+    color: #ccc;
+  }
+  .ban-icon#heart {
+    padding-left: 20px;
+  }
 .jumbo {
   margin-top: 250px;
   width: 55%;
@@ -179,8 +182,6 @@ a:visited {
   color: #56E90C;
 }
 #jets {
-  padding-left: 10px;
-  padding-right: 10px;
 }
 #jet1 {
   color: #D6FCC5;
